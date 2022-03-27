@@ -1,5 +1,4 @@
 import React from 'react';
-import profileImage from '../images/profile__image.jpg';
 import api from '../utils/Api';
 import Card from './Card';
 
@@ -16,6 +15,9 @@ function Main(props) {
         setUserDescription(userData.about);
         setUserAvatar(userData.avatar);
         setCards(cards);
+      })
+      .catch(err => {
+        console.log(err); // выведем ошибку в консоль
       });
   }, []);
 
@@ -23,7 +25,7 @@ function Main(props) {
     <main className="content">
       <section className="profile">
         <div className="profile__avatar-edit" onClick={props.onEditAvatar}></div>
-        <img className="profile__avatar" src={userAvatar} alt="Аватар пользователя" />
+        {userAvatar && (<img className="profile__avatar" src={userAvatar} alt="Аватар пользователя" /> )}
         <div className="profile__info">
           <div className="profile__info-container">
             <h1 className="profile__info-title">{userName}</h1>

@@ -38,15 +38,15 @@ function App() {
       <Footer />
       <PopupWithForm name="profile" title="Редактировать профиль" isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}>
         <input id="name" name="name" type="text" className="popup__input" required minLength="2" maxLength="40" placeholder="имя" />
-        <span id="name-error" className="error"></span>
+        <span id="name-error" className="error"/>
         <input id="profession" name="profession" type="text" className="popup__input" required minLength="2" maxLength="200" placeholder="профессия" />
-        <span id="profession-error" className="error"></span>
+        <span id="profession-error" className="error"/>
         <button type="submit" className="popup__button">Сохранить</button>
       </PopupWithForm>
 
       <PopupWithForm name="avatar" title="Обновить аватар" isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}>
         <input id="edit" name="edit" type="url" className="popup__input" required placeholder="Ссылка на картинку" />
-        <span id="edit-error" className="error"></span>
+        <span id="edit-error" className="error" />
         <button type="submit" className="popup__button">Сохранить</button>
       </PopupWithForm>
       <PopupWithForm name="delete-card" title="Вы уверены?">
@@ -54,9 +54,9 @@ function App() {
       </PopupWithForm>
       <PopupWithForm name="gallery" title="Новое место" isOpen={isAddPlacePopupOpen} onClose={closeAllPopups}>
         <input id="title" name="title" type="text" className="popup__input" required minLength="2" maxLength="30" placeholder="Название" />
-        <span id="title-error" className="error"></span>
+        <span id="title-error" className="error" />
         <input id="link" name="link" type="url" className="popup__input" required placeholder="Ссылка на картинку" />
-        <span id="link-error" className="error"></span>
+        <span id="link-error" className="error" />
         <button type="submit" className="popup__button popup__button_add-card">Создать</button>
       </PopupWithForm>
 
