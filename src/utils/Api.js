@@ -12,6 +12,12 @@ class Api {
     return Promise.reject(`Ошибка: ${res.status}`);
   }
 
+  changeLikeCardStatus(id, newStatus){
+    if(newStatus)
+      return this.addLike(id);
+    return this.removeLike(id);
+  }
+
   removeLike(id) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
       method: 'DELETE',
