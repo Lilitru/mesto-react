@@ -5,6 +5,11 @@ function AddPlacePopup(props) {
     const inputRefTitle = React.useRef();
     const inputRefLink = React.useRef();
 
+    React.useEffect(() => {
+                inputRefLink.current.value='';
+                inputRefTitle.current.value='';
+      }, [props.isOpen]);
+
     function handleSubmit(e) {
         // Запрещаем браузеру переходить по адресу формы
         e.preventDefault();
